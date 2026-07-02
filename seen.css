@@ -1,0 +1,524 @@
+/* تعريف الألوان المعتمدة في دليل الهوية الخاص بكِ */
+:root {
+    --primary-pink: #f99aaf;
+    --navy-blue: #374f69;
+    --light-blue: #DBEBF4;
+    --bg-offwhite: #fff9f9;
+    --white: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Cairo', sans-serif;
+}
+
+body {
+    background-color: var(--bg-offwhite);
+    color: var(--navy-blue);
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+/* الهيدر وقائمة التنقل */
+header {
+    background-color: var(--white);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.site-logo {
+    height: 85px;
+    width: auto;
+    display: block;
+    object-fit: contain;
+    transition: height 0.3s ease;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px; /* تقليل البادينغ الرأسي ليتزن مع كبر اللوجو */
+}
+
+/* --- قسم كل المشاركين المطور (تنسيق شبكة الـ 9 أبطال) --- */
+.all-participants-section {
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.participants-intro {
+    font-size: 18px;
+    color: var(--navy-blue);
+    margin-bottom: 40px;
+    opacity: 0.85;
+}
+
+/* شبكة مرنة لتوزيع الـ 9 كروت بشكل متوازن (3 في كل سطر على الشاشات الكبيرة) */
+.participants-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.participant-card {
+    background-color: var(--white);
+    border: 1px solid rgba(55, 79, 105, 0.12);
+    border-radius: 20px;
+    padding: 30px 25px;
+    box-shadow: 0 4px 20px rgba(55, 79, 105, 0.03);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* يضمن توازي أطوال الكروت حتى لو اختلف طول النص */
+}
+
+.participant-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(55, 79, 105, 0.1);
+    border-color: var(--primary-pink); /* يقلب الإطار وردي ناعم عند التمرير */
+}
+
+/* تصميم دائرة الصورة للأبطال */
+.p-avatar-container {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    border: 4px solid var(--light-blue);
+    overflow: hidden;
+    margin: 0 auto 18px auto;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    background-color: var(--bg-offwhite);
+}
+
+.p-avatar {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.p-name {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--navy-blue);
+    margin-bottom: 6px;
+}
+
+.p-feature {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--primary-pink); /* ميزة الطفل تظهر بالوردي المعتمد بالهوية */
+    background-color: rgba(249, 154, 175, 0.08); /* خلفية وردية خفيفة جداً تعطي جمالية للعنوان */
+    padding: 4px 12px;
+    border-radius: 20px;
+    display: inline-block;
+    margin: 0 auto 15px auto;
+}
+
+.p-bio {
+    font-size: 14px;
+    color: #556b82;
+    line-height: 1.6;
+    text-align: justify; /* تنسيق النص ليكون متساوي ومريح للعين */
+    text-align-last: center;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--navy-blue);
+    font-weight: 700;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--primary-pink);
+}
+
+/* القسم التعريفي (Hero Section) */
+.hero {
+    margin-top: 80px;
+    padding: 80px 20px;
+    background: linear-gradient(135deg, var(--white) 0%, var(--light-blue) 100%);
+    text-align: center;
+    position: relative;
+}
+
+.hero h1 {
+    font-size: 42px;
+    font-weight: 900;
+    color: var(--navy-blue);
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 18px;
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+    color: #556b82;
+}
+
+.badge-creators {
+    display: inline-block;
+    background-color: var(--primary-pink);
+    color: var(--white);
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 16px;
+    box-shadow: 0 4px 15px rgba(249, 154, 175, 0.3);
+}
+
+/* قسم الأثر والإنجازات */
+.impact-section {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: var(--primary-pink);
+    margin: 10px auto 0 auto;
+    border-radius: 2px;
+}
+
+.impact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+@media (max-width: 768px) {
+    .impact-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+.impact-card {
+    background-color: var(--white);
+    padding: 40px;
+    border-radius: 20px;
+    border-top: 5px solid var(--navy-blue);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.02);
+    transition: transform 0.3s;
+}
+
+.impact-card.kids {
+    border-top-color: var(--primary-pink);
+}
+
+.impact-card:hover {
+    transform: translateY(-5px);
+}
+
+.impact-card h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+/* قسم لوحة الشرف والفائزين المطور */
+.winners-section {
+    background-color: var(--bg-offwhite);
+    padding: 60px 20px;
+}
+
+.winners-container {
+    max-width: 1100px;
+    margin: 40px auto 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-end; /* لتعطي شكل منصة حقيقية */
+    gap: 25px;
+}
+
+.winner-card {
+    background-color: var(--navy-blue);
+    border-radius: 20px;
+    padding: 35px 25px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 10px 25px rgba(55, 79, 105, 0.15);
+    transition: transform 0.3s;
+    width: 300px;
+}
+
+/* جعل كارت المركز الأول أطول وأبرز في الترتيب البصري */
+.card-first {
+    order: 2; /* بالمنتصف */
+    padding: 50px 25px;
+    border: 3px solid var(--primary-pink);
+    transform: translateY(-15px);
+    z-index: 5;
+}
+.card-second { order: 1; } /* على اليمين/اليسار حسب الاتجاه */
+.card-third { order: 3; }
+
+@media (max-width: 900px) {
+    .winners-container { align-items: center; }
+    .card-first { transform: none; order: unset; }
+    .card-second { order: unset; }
+    .card-third { order: unset; }
+}
+
+.winner-card:hover {
+    transform: translateY(-5px) scale(1.02);
+}
+.card-first:hover {
+    transform: translateY(-20px) scale(1.02);
+}
+
+.rank-badge {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    width: 45px;
+    height: 55px;
+    background-color: var(--primary-pink);
+    color: var(--white);
+    border-radius: 0 0 10px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 22px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.winner-avatar-container {
+    width: 130px;
+    height: 130px;
+    margin: 0 auto 20px auto;
+    border-radius: 50%;
+    border: 5px solid rgba(255, 255, 255, 0.2);
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.winner-avatar {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.winner-name {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 8px;
+}
+
+.winner-achievement {
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+/* --- قسم الأحفاد الجدد (البار المخصص) --- */
+.new-grandchildren-section {
+    background-color: var(--light-blue); /* خلفية باردة وناعمة تناسب الأطفال الجدد */
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.new-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--navy-blue);
+    margin-bottom: 5px;
+}
+
+.welcome-phrase {
+    font-size: 16px;
+    color: var(--navy-blue);
+    font-weight: 700;
+    margin-bottom: 35px;
+    opacity: 0.9;
+}
+
+/* شريط أفقي يصف الأطفال بجانب بعضهم */
+.grandchildren-bar {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap; /* يتجاوب تلقائياً مع الشاشات الصغيرة */
+}
+
+.grandchild-item {
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.grandchild-item:hover {
+    transform: scale(1.05); /* حركة تفاعلية لطيفة عند تمرير الماوس */
+}
+
+/* حاوية صور الأطفال - دائرية وبإطار وردي من ألوان الهوية */
+.baby-avatar-container {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 4px solid var(--primary-pink);
+    overflow: hidden;
+    margin: 0 auto 12px auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    background-color: var(--white);
+}
+
+.baby-avatar {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.baby-name {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--navy-blue);
+}
+
+/* الفوتر */
+footer {
+    text-align: center;
+    padding: 30px;
+    background-color: var(--white);
+    border-top: 1px solid var(--light-blue);
+    font-size: 14px;
+}
+
+/* تفعيل النزول الناعم والانسيابي للموقع بالكامل */
+html {
+    scroll-behavior: smooth;
+}
+
+/* باقي كودك القديم كما هو */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Cairo', sans-serif;
+}
+
+/* --- شاشات الجوال والأجهزة الذكية (أصغر من 768 بكسل) --- */
+@media (max-width: 768px) {
+    /* تصغير اللوجو قليلاً على الجوال عشان ما يغطي على المحتوى */
+    .site-logo {
+        height: 65px;
+    }
+
+    /* جعل الهيدر يترتب عمودياً لتفادي تداخل النصوص */
+    .nav-container {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .nav-links {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-bottom: 5px;
+    }
+
+    .nav-links a {
+        font-size: 14px; /* تصغير الخط قليلاً ليناسب شاشة الجوال */
+    }
+
+    /* ضبط المساحة العلوية للقسم الأول لكي لا يختفي تحت الهيدر المرتد */
+    .hero {
+        margin-top: 130px;
+        padding: 60px 15px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    /* ضبط قسم الفرسان (المشاركين) على الجوال */
+    .participants-grid {
+        grid-template-columns: 1fr; /* كرت واحد ممتد في كل سطر */
+        gap: 20px;
+    }
+
+    .participant-card {
+        padding: 20px 15px;
+    }
+
+    /* تحويل منصة الفائزين إلى ترتيب عمودي مريح */
+    .winners-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .winner-card {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    /* إلغاء حركات المنصة الخاصة بالكمبيوتر لكي تظهر مرتبة يدوياً على الجوال */
+    .card-first, .card-second, .card-third {
+        order: unset !important;
+        transform: none !important;
+    }
+
+    .card-first:hover {
+        transform: translateY(-5px) scale(1.02) !important;
+    }
+
+    /* ضبط بار الأحفاد الجدد */
+    .grandchildren-bar {
+        gap: 25px;
+    }
+
+    .baby-avatar-container {
+        width: 85px;
+        height: 85px;
+    }
+}
